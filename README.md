@@ -1,25 +1,36 @@
-# WebClassGetter-mk2
+<h1>WebClassGetter ver.2.0</h1>
 
-## <h3>前バージョン(https://github.com/y6-maenaka/WebClassGetter)からの追加機能</h3>
+<br>
+
+<h2>前バージョン(<a href="https://github.com/y6-maenaka/WebClassGetter">WebClassGetter ver.1.0</a>)からの追加機能</h2>
   <ol>
-  <li>コンテンツページからダウンロード可能(前バージョンではhlsプレイヤーから取得する必要あり)</li>
-  <li>SSO認証(SP認証も含む)の自動パス</li>
-  <li>複数動画の並列ダウンロード</li>
+  <li>コンテンツページからダウンロード機能 (ver.1.0では デベロッパーツール → hls player からリンクを直接取得する必要があった)</li>
+  <li>SSO認証(SP認証も含む)の自動Pass</li>
+  <li>複数動画の並列ダウンロード機能</li>
   </ol>
 <br/><br/>
 
-## 必要ライブラリ/モジュール
-  ライブラリ　: requirements.txt　を参照<br>
-  モジュール　: ffmpeg(https://phoenixnap.com/kb/ffmpeg-mac)<br>
-<br/><br/>
+## 必要ライブラリ / モジュール
+  ライブラリ　: requirements.txt を参照<br>
+  モジュール　: <a href="https://phoenixnap.com/kb/ffmpeg-mac">ffmpeg</a>
+<br><br>
 
 ## 使い方
-  urls.ymlファイルに 
-  動画名: url このフォーマットで保存名と動画が配置されているWebClassのURLを記載&保存後 $python downloader.py でプログラムを起動<br>
-  (例) <br>
-      サンプル１: https://videos/content/0123<br>
-      サンプル２: https://videos/content/0321<br>
+  **urls.yml** ファイルに 
+  ```yaml
+  動画保存名: URL
+  ```
+   < 例 >
+  ```yaml
+  サンプル1: https://videos/content/0123
+  サンプル1: https://videos/content/0124
+  ```
 
+  以上のフォーマットで動画保存名と動画が配信されているWebClassのURLを記載&保存後
+  ```bash
+  $ python downloader.py
+  ```
+  でプログラムを起動するとダウンロードが始まる
 
 
 
